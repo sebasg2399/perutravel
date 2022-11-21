@@ -1,0 +1,44 @@
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-center {
+  text-align: center;
+}
+.full-width {
+  width: 100%;
+}
+.bottom-left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.flex {
+  display: flex;
+  &.flex-column {
+    flex-direction: column;
+  }
+  &.flex-center {
+    align-items: center;
+  }
+}
+
+@for $i from 1 through 5 {
+  .p-#{$i} {
+    padding: #{$i}rem;
+  }
+}
+
+@for $i from 1 through 5 {
+  .gap-#{$i} {
+    gap: #{$i}rem;
+  }
+}
+
+.m-col-2 {
+  @media screen and (max-width: 1220px) and (min-width: 712px) {
+    grid-column: 1/3;
+  }
+}
